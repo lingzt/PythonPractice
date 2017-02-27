@@ -34,10 +34,10 @@ def isIn(char, aStr):
         midNumber = int(len(aStr)/2)
         print(aStr)
         if len(aStr)%2 == 1:
-            if char == aStr[midNumber]:
+            if char == aStr[midNumber]: 
                 return True
             elif char < aStr[midNumber]:
-                return isIn(char,aStr[:midNumber])
+                return isIn(char,aStr[:midNumber]) #in python the range [:midNumber] does not include midNUmber
             else:
                 return isIn(char, aStr[midNumber+1:])
         else:
