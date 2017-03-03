@@ -5,6 +5,9 @@ Define an intersect method that returns a new intSet containing elements that ap
 s1.intersect(s2)
 would return a new intSet of integers that appear in both s1 and s2. Think carefully - 
 what should happen if s1 and s2 have no elements in common?
+
+Add the appropriate method(s) so that len(s) returns the number of elements in s.
+Hint: look through the Python docs to figure out what you'll need to solve this problem.
 """
 class intSet(object):
     """An intSet is a set of integers
@@ -40,6 +43,12 @@ class intSet(object):
 
     def intersect(self, other):
         assert type(other) == type(self)
-        for item in self.vals:
-            self.insert(item)
-        return self
+        intersectedSet = intSet()
+        for item in other.vals:
+            if item in self.vals: 
+                intersectedSet.insert(item)
+        return intersectedSet
+        
+    def __len__(self):
+        return len(self.vals)
+
