@@ -13,6 +13,10 @@ def genPrimes():
         if isPrime(number):
             prime = number
             yield prime
+            #return  prime
+"""
+return will StopIteration!!!!!!!!!!!!!!!!!!!!!!!!
+"""
             
 def isPrime(aNumber):
     for divider in range(1,aNumber):
