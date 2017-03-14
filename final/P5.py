@@ -47,23 +47,31 @@ class USResident(Person):
     A Person who resides in the US.
     """
     def __init__(self, name, status):
+        
         """ 
         Initializes a Person object. A USResident object inherits 
         from Person and has one additional attribute:
         status: a string, one of "citizen", "legal_resident", "illegal_resident"
         Raises a ValueError if status is not one of those 3 strings
         """
-        # Write your code here
+        self.name = name
+        if status == "citizen" or  status == "legal_resident" or status == "illegal_resident":
+            self.status = status
+        else:
+            int('h')
         
     def getStatus(self):
         """
         Returns the status
         """
-        # Write your code here
+        return self.status
+
+
+
         
 a = USResident('Tim Beaver', 'citizen')
 print(a.getStatus())
-b = USResident('Tim Horton', 'non-resident')
+b = USResident('Tim Horton', 'illegal_residen')
 """
 citizen
 ## will show that a ValueError was raised at a particular line
