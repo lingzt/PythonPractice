@@ -18,5 +18,12 @@ def oddTuples(aTup):
         if i%2==0:
             anotherTup += (aTup[i],)
     return anotherTup
+'''
 
-print(oddTuples(('I', 'am', 'a', 'test', 'tuple')))
+def oddTuples(aTup):
+    anotherTup=()
+    for item in aTup:
+        if aTup.index(item)%2==0:
+            anotherTup += (item,)
+    return anotherTup
+'''
